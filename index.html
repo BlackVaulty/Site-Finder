@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Site Finder Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="loader">
+
+    <div class="spinner"></div>
+
+    <span>Loading Database...</span>
+
+</div>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+
+                📡
+
+            </div>
+
+            <div>
+
+                <h2>Site Finder</h2>
+
+                <small>PRO</small>
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <button class="menu active">
+
+                🏠 Dashboard
+
+            </button>
+
+            <button class="menu">
+
+                🔎 Site Finder
+
+            </button>
+
+            <button class="menu">
+
+                ⭐ Favorite
+
+            </button>
+
+            <button class="menu">
+
+                🕒 History
+
+            </button>
+
+            <button class="menu">
+
+                ⚙ Setting
+
+            </button>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            Database Local
+
+            <strong id="dbStatus">
+
+                Empty
+
+            </strong>
+
+        </div>
+
+    </aside>
+
+    <main>
+
+        <header>
+
+            <div>
+
+                <h1>
+
+                    SITE FINDER PRO
+
+                </h1>
+
+                <p>
+
+                    Telecom Database Monitoring
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <button id="themeBtn">
+
+                    🌙
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+
+                <small>Total Site</small>
+
+                <h2 id="totalSite">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <small>Favorite</small>
+
+                <h2 id="favoriteTotal">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <small>History</small>
+
+                <h2 id="historyTotal">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <small>Status</small>
+
+                <h2 id="status">
+
+                    Ready
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <section class="toolbar">
+
+            <label class="upload-btn">
+
+                📂 Upload Excel
+
+                <input
+
+                    type="file"
+
+                    id="excelFile"
+
+                    accept=".xlsx,.xls">
+
+            </label>
+
+            <button id="clearDB">
+
+                🗑 Clear DB
+
+            </button>
+
+            <button id="reloadDB">
+
+                🔄 Reload
+
+            </button>
+
+        </section>
+
+        <section id="dropZone">
+
+            Drop Excel Here
+
+        </section>
+
+        <section class="search-box">
+
+            <input
+
+                type="text"
+
+                id="searchInput"
+
+                placeholder="Search ID Site / Hostname / Cluster / Address">
+
+            <button
+
+                id="searchBtn">
+
+                SEARCH
+
+            </button>
+
+        </section>
+
+        <section class="content">
+
+            <div class="result-panel">
+
+                <div class="panel-title">
+
+                    Search Result
+
+                </div>
+
+                <div id="resultList">
+
+                </div>
+
+            </div>
+
+            <div class="detail-panel">
+
+                <div class="panel-title">
+
+                    Site Detail
+
+                </div>
+
+                <div id="detailPanel">
+
+                    <div class="welcome">
+
+                        <h2>
+
+                            Welcome
+
+                        </h2>
+
+                        <p>
+
+                            Upload database kemudian cari Site.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
